@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Интерфейс чата</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="chat">
+      <aside class="chat__aside">
+        <div class="chat__top">
+          <h1 class="chat__title">Сообщения</h1>
+          <button class="chat__btn" aria-label="Написать сообщение">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_22002_5)">
+                <path
+                  d="M14.116 4.54134C14.4685 4.18895 14.6665 3.71098 14.6666 3.21257C14.6666 2.71416 14.4687 2.23614 14.1163 1.88367C13.7639 1.5312 13.286 1.33315 12.7876 1.33308C12.2892 1.33302 11.8111 1.53095 11.4587 1.88334L2.56133 10.7827C2.40654 10.937 2.29207 11.127 2.228 11.336L1.34733 14.2373C1.3301 14.295 1.3288 14.3562 1.34356 14.4146C1.35833 14.4729 1.38861 14.5262 1.43119 14.5687C1.47378 14.6112 1.52708 14.6414 1.58544 14.6561C1.64379 14.6707 1.70504 14.6693 1.76266 14.652L4.66466 13.772C4.87344 13.7085 5.06345 13.5947 5.218 13.4407L14.116 4.54134Z"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10 3.33333L12.6667 5.99999"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_22002_5">
+                  <rect width="16" height="16" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </button>
+        </div>
+        <input
+          type="text"
+          class="chat__input"
+          placeholder="Поиск диалогов..."
+        />
+        <ul class="chat__items">
+          <li class="chat__item">
+            <a href="/chat/123/" class="chat-user-card chat-user-card--active">
+              <img
+                src="img/1.png"
+                alt="Алексей"
+                class="chat-user-card__avatar"
+              />
+              <div class="chat-user-card__text">
+                <div class="chat-user-card__top">
+                  <div class="chat-user-card__name">Алексей</div>
+                  <time
+                    datetime="2026-07-06T14:32:00"
+                    class="chat-user-card__time"
+                    >14:32</time
+                  >
+                </div>
+                <p class="chat-user-card__descr">
+                  Давай обновим layout карточек и посмотрим на spacing
+                </p>
+              </div>
+            </a>
+          </li>
+          <li class="chat__item">
+            <a href="/chat/123/" class="chat-user-card">
+              <img src="img/2.png" alt="Мария" class="chat-user-card__avatar" />
+              <div class="chat-user-card__text">
+                <div class="chat-user-card__top">
+                  <div class="chat-user-card__name">Мария</div>
+                  <time
+                    datetime="2026-07-06T00:00:00"
+                    class="chat-user-card__time"
+                    >Вчера</time
+                  >
+                </div>
+                <p class="chat-user-card__descr">
+                  Я закончила адаптив для страницы профиля
+                </p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </aside>
+      <div class="chat__content">
+        <div class="chat__panel">
+          <button class="chat__close" aria-label="Закрыть">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15 5L5 15"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M5 5L15 15"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <div class="chat-user">
+            <img
+              src="img/1.png"
+              alt="Алексей Орлов"
+              class="chat-user__avatar"
+            />
+            <div class="chat-user__text">
+              <div class="chat-user__name">Алексей Орлов</div>
+              <div class="chat-user__status">Онлайн</div>
+            </div>
+          </div>
+          <div class="chat__btns">
+            <button class="chat__btn" aria-label="Позвонить">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_22002_59)">
+                  <path
+                    d="M9.22125 11.0453C9.35894 11.1086 9.51405 11.123 9.66105 11.0863C9.80804 11.0496 9.93814 10.9639 10.0299 10.8433L10.2666 10.5333C10.3908 10.3677 10.5518 10.2333 10.737 10.1408C10.9221 10.0482 11.1263 10 11.3333 10H13.3333C13.6869 10 14.026 10.1405 14.2761 10.3905C14.5261 10.6406 14.6666 10.9797 14.6666 11.3333V13.3333C14.6666 13.687 14.5261 14.0261 14.2761 14.2762C14.026 14.5262 13.6869 14.6667 13.3333 14.6667C10.1507 14.6667 7.09841 13.4024 4.84797 11.152C2.59753 8.90152 1.33325 5.84927 1.33325 2.66668C1.33325 2.31305 1.47373 1.97392 1.72378 1.72387C1.97382 1.47382 2.31296 1.33334 2.66659 1.33334H4.66659C5.02021 1.33334 5.35935 1.47382 5.60939 1.72387C5.85944 1.97392 5.99992 2.31305 5.99992 2.66668V4.66668C5.99992 4.87367 5.95173 5.07782 5.85915 5.26296C5.76658 5.4481 5.63218 5.60915 5.46658 5.73334L5.15458 5.96734C5.0322 6.06079 4.94593 6.19373 4.91045 6.34358C4.87496 6.49342 4.89244 6.65093 4.95992 6.78934C5.87104 8.63992 7.36953 10.1365 9.22125 11.0453Z"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_22002_59">
+                    <rect width="16" height="16" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </button>
+            <button class="chat__btn" aria-label="Еще">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7.66667 8.33333C8.03486 8.33333 8.33333 8.03486 8.33333 7.66667C8.33333 7.29848 8.03486 7 7.66667 7C7.29848 7 7 7.29848 7 7.66667C7 8.03486 7.29848 8.33333 7.66667 8.33333Z"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M12.6667 8.66668C13.0349 8.66668 13.3333 8.3682 13.3333 8.00001C13.3333 7.63182 13.0349 7.33334 12.6667 7.33334C12.2985 7.33334 12 7.63182 12 8.00001C12 8.3682 12.2985 8.66668 12.6667 8.66668Z"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M3.33341 8.66668C3.7016 8.66668 4.00008 8.3682 4.00008 8.00001C4.00008 7.63182 3.7016 7.33334 3.33341 7.33334C2.96522 7.33334 2.66675 7.63182 2.66675 8.00001C2.66675 8.3682 2.96522 8.66668 3.33341 8.66668Z"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="chat__messages">
+          <div class="chat-message">
+            <div class="chat-message__inner">
+              Давай попробуем сделать карточки компактнее, а отступы внутри
+              интерфейса привести к одной системе.
+            </div>
+            <time datetime="2026-07-06T14:21:00" class="chat-message__time"
+              >14:21</time
+            >
+          </div>
+          <div class="chat-message chat-message--mine">
+            <div class="chat-message__inner">
+              Да, и ещё нужно пересобрать layout блока прогресса.
+            </div>
+            <time datetime="2026-07-06T14:24:00" class="chat-message__time"
+              >14:24</time
+            >
+          </div>
+          <div class="chat-message">
+            <div class="chat-message__inner">
+              Отлично, тогда вечером подготовлю новый вариант интерфейса.
+            </div>
+            <time datetime="2026-07-06T14:28:00" class="chat-message__time"
+              >14:28</time
+            >
+          </div>
+        </div>
+        <div class="chat__bottom">
+          <form class="chat__form">
+            <input
+              type="text"
+              placeholder="Напишите сообщение..."
+              class="chat__input"
+            />
+            <button class="chat__send" type="submit">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
